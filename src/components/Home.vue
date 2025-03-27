@@ -3,7 +3,7 @@ export default {
   
   data() {
     return {
-      words: ["Student", "Designer", "Java Developer"],
+      words: ["Designer", "Java Developer", "Vue.js Developer"],
       currentWordIndex: 0,
       isMobileNavActive: false
     };
@@ -105,7 +105,7 @@ export default {
                   </div>
                   <div class="col-lg-6">
                   <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Возраст:</strong> <span>19</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Возраст:</strong> <span>20</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Степень:</strong> <span>Бакалавр</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>g.o.pavlov2019@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Фриланс:</strong> <span>Доступен</span></li>
@@ -135,7 +135,7 @@ export default {
       <h3 class="resume-title">Обзор</h3>
       <div class="resume-item pb-0">
         <h4>Павлов Глеб</h4>
-        <p><em>Я подхожу к каждой задаче с энтузиазмом и искренней страстью к тому, что я делаю. Обратная связь и правки всегда приветствуются; я воспринимаю ее как возможность для роста и улучшения своей работы.</em></p>
+        <p><em>Я подхожу к каждой задаче с энтузиазмом и искренней страстью к тому, что я делаю. Обратная связь и правки всегда приветствуются; я воспринимаю их как возможность для роста и улучшения своей работы.</em></p>
         <ul>
           <li>Казахстан, Алматы</li>
           <li>+7 953 834 12 12</li>
@@ -336,15 +336,15 @@ export default {
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
-          <img :src="StoryMarks" class="img-fluid" alt="">
+          <img :src="Cocktail" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Sign-ature Cocktail - Компьютерная игра. С камеры ПК захватываются ваши руки, и вы можете управлять руками персонажа, как своими.</h4>
-            <p>Веб</p>
+            <h4>Sign-ature Cocktail - Компьютерная игра где вы можете управлять руками персонажа, как своими через камеру.</h4>
+            <p>Работа</p>
             <div class="portfolio-links">
-              <a :href="Cocktail" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Веб 3" target="_blank"><i class="bx bx-plus"></i></a>
-              <a href="https://a-walking-mess.itch.io/sign-ature-cocktail" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
+              <a :href="Cocktail" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Приложение 2" target="_blank"><i class="bx bx-plus"></i></a>
+              <a href="https://a-walking-mess.itch.io/sign-ature-cocktail" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-plus"></i></a>
               <a href="https://drive.google.com/file/d/1LhJ7cjRZ1KN2wLlLCO9LsZSM3f0b3fYD/view?clckid=25ce10c2" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
             </div>
           </div>

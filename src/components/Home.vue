@@ -66,8 +66,8 @@ export default {
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Pavlov Gleb</h1>
-      <p>I'm <span class="typed">{{ words[currentWordIndex] }}</span></p>
+      <h1>Павлов Глеб</h1>
+      <p>Я <span class="typed">{{ words[currentWordIndex] }}</span></p>
       <div class="social-links">
         <a href="https://www.instagram.com/venikhl/" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://t.me/venikhl" class="telegram"><i class="bx bxl-telegram"></i></a>

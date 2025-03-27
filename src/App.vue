@@ -9,7 +9,7 @@ import innobot from "./assets/img/portfolio/innobot.png";
 import STEP from "./assets/img/portfolio/STEP.png";
 import ELAB from "./assets/img/portfolio/ELAB.png";
 import bebras from "./assets/img/portfolio/bebras.png";
-import Cocktail from "./assets/img/portfolio/Cocktail.png";
+import Cocktail from "./assets/img/portfolio/Cocktail.jpg";
 import Home from './components/Home.vue'
 </script>
 

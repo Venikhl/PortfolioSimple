@@ -25,5 +25,6 @@ import Home from './components/Home.vue'
     :ELAB="ELAB"
     :bebras="bebras"
     :innobot="innobot"
+    :Cocktail="Cocktail"
   />
 </template>

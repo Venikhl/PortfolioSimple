@@ -190,21 +190,38 @@ h6 {
 .nav-menu a span,
 .nav-menu a:focus span {
   padding: 0 5px 0 7px;
-  color: #e0e0e0; /* Lighter text for dark theme */
+  color: #e0e0e0;
 }
 
 @media (min-width: 992px) {
+  .nav-menu {
+    width: 56px;
+    transition: width 0.3s ease;
+  }
+
+  .nav-menu:hover {
+    width: 150px;
+  }
+
   .nav-menu a,
   .nav-menu a:focus {
-    width: 56px;
+    width: 100%;
   }
 
   .nav-menu a span,
   .nav-menu a:focus span {
     display: none;
-    color: #fff;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  /* Когда вся панель в состоянии ховера — показываем текст */
+  .nav-menu:hover a span {
+    display: inline;
+    opacity: 1;
   }
 }
+
 
 .nav-menu a:hover,
 .nav-menu .active,
@@ -292,6 +309,11 @@ h6 {
 
 .mobile-nav-menu a:hover {
   color: white;
+}
+
+/* Подсветка активной кнопки */
+.nav-link.active {
+  color: #18d26e !important;
 }
 
 /*--------------------------------------------------------------

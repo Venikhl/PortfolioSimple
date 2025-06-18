@@ -1,25 +1,51 @@
 <script>
 export default {
-  
   data() {
     return {
-      words: ["Designer", "Java Developer", "Vue.js Developer"],
+      words: ["Designer", "Full-stack Developer", "Web Developer"],
       currentWordIndex: 0,
-      isMobileNavActive: false
+      isMobileNavActive: false,
+      isNavbarExpanded: false,
+      activeSection: 'hero'
     };
   },
   mounted() {
     this.changeWord();
+    window.addEventListener('scroll', this.onScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll);
   },
   methods: {
     changeWord() {
       setInterval(() => {
         this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
-      }, 2000); // меняем слово каждые 2 секунды
+      }, 2000);
     },
     toggleMobileNav() {
-            this.isMobileNavActive = !this.isMobileNavActive;
+      this.isMobileNavActive = !this.isMobileNavActive;
+    },
+    expandNavbar() {
+      this.isNavbarExpanded = true;
+    },
+    collapseNavbar() {
+      this.isNavbarExpanded = false;
+    },
+    onScroll() {
+      const sections = ['hero', 'about', 'resume', 'portfolio'];
+      let found = 'hero';
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom > 100) {
+            found = id;
+            break;
+          }
         }
+      }
+      this.activeSection = found;
+    }
   },
   props: {
     diplomaSTEP2: String,
@@ -33,7 +59,6 @@ export default {
     bebras: String,
     innobot: String,
     Cocktail: String,
-
   }
 }
 </script>
@@ -44,24 +69,84 @@ export default {
    <!-- ======= Mobile nav toggle button ======= -->
    <i class="bi bi-list mobile-nav-toggle d-lg-none" @click="toggleMobileNav"></i>
   <ul v-if="isMobileNavActive" class="mobile-nav-menu">
-      <li><a href="#hero" class="nav-link scrollto active">Главная</a></li>
-      <li><a href="#about" class="nav-link scrollto">Обо мне</a></li>
-      <li><a href="#resume" class="nav-link scrollto">Резюме</a></li>
-      <li><a href="#portfolio" class="nav-link scrollto">Портфолио</a></li>
+    <li>
+      <a
+        href="#hero"
+        class="nav-link scrollto"
+        :class="{ active: activeSection === 'hero' }"
+      >Главная</a>
+    </li>
+    <li>
+      <a
+        href="#about"
+        class="nav-link scrollto"
+        :class="{ active: activeSection === 'about' }"
+      >Обо мне</a>
+    </li>
+    <li>
+      <a
+        href="#resume"
+        class="nav-link scrollto"
+        :class="{ active: activeSection === 'resume' }"
+      >Резюме</a>
+    </li>
+    <li>
+      <a
+        href="#portfolio"
+        class="nav-link scrollto"
+        :class="{ active: activeSection === 'portfolio' }"
+      >Портфолио</a>
+    </li>
   </ul>
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">
-
-    <nav id="navbar" class="navbar nav-menu">
+    <nav
+      id="navbar"
+      class="navbar nav-menu"
+      :class="{ expanded: isNavbarExpanded }"
+      @mouseenter="expandNavbar"
+      @mouseleave="collapseNavbar"
+    >
       <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Главная</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Обо мне</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Резюме</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Портфолио</span></a></li>
+        <li>
+          <a
+            href="#hero"
+            class="nav-link scrollto"
+            :class="{ active: activeSection === 'hero' }"
+          >
+            <i class="bx bx-home"></i> <span>Главная</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="nav-link scrollto"
+            :class="{ active: activeSection === 'about' }"
+          >
+            <i class="bx bx-user"></i> <span>Обо мне</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#resume"
+            class="nav-link scrollto"
+            :class="{ active: activeSection === 'resume' }"
+          >
+            <i class="bx bx-file-blank"></i> <span>Резюме</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#portfolio"
+            class="nav-link scrollto"
+            :class="{ active: activeSection === 'portfolio' }"
+          >
+            <i class="bx bx-book-content"></i> <span>Портфолио</span>
+          </a>
+        </li>
       </ul>
-    </nav><!-- .nav-menu -->
-
-  </header><!-- End Header -->
+    </nav>
+  </header>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
@@ -83,7 +168,7 @@ export default {
 
         <div class="section-title">
           <h2>Обо мне</h2>
-          <p>Привет! Я Глеб,  20-летний студент Университета Иннополис. Я глубоко изучил языки программирования, такие как Java, C++ и Python, а также свободно владею английским и русским.</p>
+          <p>Привет! Я Глеб — фронтенд-разработчик с опытом создания продуктов на Vue, React и TypeScript. Работал над интерфейсами от идеи до продакшна, участвовал в проектировании архитектуры, взаимодействии с аналитикой и бэкендом. Стараюсь смотреть на задачу шире кода и фокусироваться на продуктовой ценности.</p>
         </div>
 
         <div class="row">
@@ -91,9 +176,9 @@ export default {
             <img src="../assets/img/profile-img.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>UI/UX Дизайнер, Java &amp; Web Разработчик.</h3>
+            <h3>UI/UX Дизайнер &amp; Web Разработчик.</h3>
             <p class="fst-italic">
-              В настоящее время я учусь на третьем курсе Университета Иннополис по специальности «Наука о данных и искусственный интеллект»
+              В настоящее время я учусь на 4 курсе Университета Иннополис по специальности «Информатика и вычислительная техника»
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -113,7 +198,7 @@ export default {
               </div>
             </div>
             <p>
-              Заканчивая третий курс, у меня теперь есть достаточно времени для работы на полный рабочий день. Обучение в Иннополисе длится всего три года, поэтому я готов полностью посвятить себя работе.
+              У меня свободный график, поэтому готов работать на полной занятости в режиме 5/2.
             </p>
           </div>
         </div>
@@ -127,7 +212,7 @@ export default {
 
     <div class="section-title">
   <h2>Резюме</h2>
-  <p>Хотя у меня нет традиционного опыта работы, мой путь был наполнен непрерывным саморазвитием. Я завершил множество курсов, улучшая свои навыки и поддерживая актуальность знаний в своей области. Кроме того, я принимал участие в нескольких проектах, что позволило мне применять и тестировать свои знания в реальных сценариях. Уверяю вас, я знаю своё дело и всегда готов принимать вызовы и вносить вклад в новые проекты.</p>
+  <p>Разрабатываю интерфейсы, которые не только выглядят, но и работают: стабильно, понятно и удобно. Привык быстро вливаться в команду, брать ответственность и глубоко разбираться в логике проекта. Всегда готов к вызовам и уверен в своих навыках.</p>
 </div>
 
   <div class="row">
@@ -137,7 +222,7 @@ export default {
         <h4>Павлов Глеб</h4>
         <p><em>Я подхожу к каждой задаче с энтузиазмом и искренней страстью к тому, что я делаю. Обратная связь и правки всегда приветствуются; я воспринимаю их как возможность для роста и улучшения своей работы.</em></p>
         <ul>
-          <li>Казахстан, Алматы</li>
+          <li>Россия, Иннополис</li>
           <li>+7 953 834 12 12</li>
           <li>g.o.pavlov2019@gmail.com</li>
         </ul>
@@ -172,9 +257,9 @@ export default {
           <li>Java</li>
           <li>Python</li>
           <li>PHP</li>
-          <!-- <li>Frontend Frameworks (Angular, React)</li> -->
+          <li>Frontend Frameworks (Vue.js, React)</li>
         </ul>
-        <p>Эти области не только обогатили моё понимание, но и позволили мне участвовать в различных проектах, что способствовало расширению моего опыта.</p>
+        <p>Эти области позволили мне участвовать в различных проектах, хакатонах и задачах что способствовало расширению моего опыта.</p>
       </div>
     </div>
   </div>

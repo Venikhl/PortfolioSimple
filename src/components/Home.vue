@@ -154,7 +154,7 @@ export default {
  <section id="hero">
     <!-- Бесконечный фон текста -->
     <div class="portfolio-bg-text">
-      <div v-for="n in 20" :key="n">PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO</div>
+      <div v-for="n in 40" :key="n">PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO</div>
     </div>
 
     <!-- Стеклянный блок с текстом -->

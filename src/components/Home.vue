@@ -220,60 +220,76 @@ export default {
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-  <h2>Резюме</h2>
-  <p>Разрабатываю интерфейсы, которые не только выглядят, но и работают: стабильно, понятно и удобно. Привык быстро вливаться в команду, брать ответственность и глубоко разбираться в логике проекта. Всегда готов к вызовам и уверен в своих навыках.</p>
-</div>
-
-  <div class="row">
-    <div class="col-lg-6">
-      <h3 class="resume-title">Обзор</h3>
-      <div class="resume-item pb-0">
-        <h4>Павлов Глеб</h4>
-        <p><em>Я подхожу к каждой задаче с энтузиазмом и искренней страстью к тому, что я делаю. Обратная связь и правки всегда приветствуются; я воспринимаю их как возможность для роста и улучшения своей работы.</em></p>
-        <ul>
-          <li>Россия, Иннополис</li>
-          <li>+7 953 834 12 12</li>
-          <li>g.o.pavlov2019@gmail.com</li>
-        </ul>
-      </div>
-      <h3 class="resume-title">Бакалавриат</h3>
-      <div class="resume-item">
-        <h4>2022 - 2025</h4>
-        <p><em>Университет Иннополис, Россия, Татарстан</em></p>
-        <p>Факультет: Факультет компьютерных и инженерных наук</p>
-        <p>Специальность: Информатика и вычислительная техника</p>
-        <p>Направление: Анализ данных и Искусственный интеллект</p>
-      </div>
+      <h2>Резюме</h2>
+      <p>Разрабатываю интерфейсы, которые не только выглядят, но и работают: стабильно, понятно и удобно. Привык быстро вливаться в команду, брать ответственность и глубоко разбираться в логике проекта. Всегда готов к вызовам и уверен в своих навыках.</p>
     </div>
-    <div class="col-lg-6">
-      <h3 class="resume-title">Образование</h3>
-      <div class="resume-item">
-        <h4>ITStep Academy</h4>
-        <h5>2018 - 2022</h5>
-        <p><em>Казахстан, Алматы</em></p>
-        <p><strong>Я развил разнообразные навыки и накопил обширные знания в различных областях, включая:</strong></p>
-        <ul class="skills-list">
-          <li>Основы информационных технологий</li>
-          <li>Программирование на C</li>
-          <li>Объектно-ориентированное программирование (C++)</li>
-          <li>Теория баз данных</li>
-          <li>MS SQL Server</li>
-          <li>Веб-разработка (HTML5, CSS3, JS)</li>
-          <li>Разработка игр (Unity)</li>
-          <li>Разработка десктопных приложений (WPF)</li>
-          <li>Веб-технологии (ASP.NET AJAX)</li>
-          <li>UML</li>
-          <li>Java</li>
-          <li>Python</li>
-          <li>PHP</li>
-          <li>Frontend Frameworks (Vue.js, React)</li>
-        </ul>
-        <p>Эти области позволили мне участвовать в различных проектах, хакатонах и задачах что способствовало расширению моего опыта.</p>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="resume-title">Обзор</h3>
+        <div class="resume-item pb-0">
+          <h4>Павлов Глеб</h4>
+          <p><em>Я подхожу к каждой задаче с энтузиазмом и искренней страстью к тому, что я делаю. Обратная связь и правки всегда приветствуются; я воспринимаю их как возможность для роста и улучшения своей работы.</em></p>
+          <ul>
+            <li>Россия, Иннополис</li>
+            <li>+7 953 834 12 12</li>
+            <li>g.o.pavlov2019@gmail.com</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Бакалавриат</h3>
+        <div class="resume-item">
+          <h4>2022 - 2025</h4>
+          <p><em>Университет Иннополис, Россия, Татарстан</em></p>
+          <p>Факультет: Факультет компьютерных и инженерных наук</p>
+          <p>Специальность: Информатика и вычислительная техника</p>
+          <p>Направление: Анализ данных и Искусственный интеллект</p>
+        </div>
+
+        <h3 class="resume-title">Последние проекты</h3>
+        <div class="resume-item">
+          <h4><a href="https://github.com/Venikhl" target="_blank" style="color:#db567a;">Мой GitHub</a></h4>
+          <p><em>В студенческих проектах я преимущественно работал с Vue.js, создавая полноценные фронтенд-интерфейсы, а в настоящее время изучаю React и развиваю проекты в нём.</em></p>
+          <ul>
+            <li><strong>ИИ-генератор персонажей</strong> — веб-приложение на Vue.js для генерации изображения и фоновой музыки персонажа по опросу/описанию. <br><a href="https://github.com/Venikhl/WebAppMusicImageGen" target="_blank">[GitHub → AI Character Generator]</a></li>
+            <li><strong>Агрегатор вакансий и резюме</strong> — текущий проект на React с фильтрацией, пагинацией и авторизацией. <br><a href="https://github.com/Venikhl/vacancy-aggregator" target="_blank">[GitHub → Vacancy & Resume Aggregator]</a></li>
+          </ul>
+          <p>Это малая часть моих работ. Остальные проекты — от веб-приложений до экспериментов с интерфейсами и ИИ — можно найти ниже, в разделе портфолио.</p>
+        </div>
+      </div>
+
+        
+      <div class="col-lg-6">
+        <h3 class="resume-title">Образование</h3>
+        <div class="resume-item">
+          <h4>ITStep Academy</h4>
+          <h5>2018 - 2022</h5>
+          <p><em>Казахстан, Алматы</em></p>
+          <p><strong>Я развил разнообразные навыки и накопил обширные знания в различных областях, включая:</strong></p>
+          <ul class="skills-list">
+            <li>Основы информационных технологий</li>
+            <li>Программирование на C</li>
+            <li>Объектно-ориентированное программирование (C++)</li>
+            <li>Теория баз данных</li>
+            <li>MS SQL Server</li>
+            <li>Веб-разработка (HTML5, CSS3, JS)</li>
+            <li>Разработка игр (Unity)</li>
+            <li>Разработка десктопных приложений (WPF)</li>
+            <li>Веб-технологии (ASP.NET AJAX)</li>
+            <li>UML</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>Frontend Frameworks (Vue.js, React)</li>
+          </ul>
+          <p>Эти области позволили мне участвовать в различных проектах, хакатонах и задачах что способствовало расширению моего опыта.</p>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
 </section>
+
     <!-- ======= Раздел Портфолио ======= -->
 <section id="portfolio" class="portfolio section-bg">
   <div class="container" data-aos="fade-up">
@@ -309,7 +325,7 @@ export default {
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-diploma">
+      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-diploma">
         <div class="portfolio-wrap">
           <img :src="ELAB" class="img-fluid" alt="">
           <div class="portfolio-info">
@@ -320,7 +336,7 @@ export default {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-diploma">
         <div class="portfolio-wrap">
@@ -335,7 +351,7 @@ export default {
         </div>
       </div>
       
-      <div class="col-lg-4 col-md-6 portfolio-item filter-diploma">
+      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-diploma">
         <div class="portfolio-wrap">
           <img :src="bebras" class="img-fluid" alt="">
           <div class="portfolio-info">
@@ -346,7 +362,7 @@ export default {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-diploma">
         <div class="portfolio-wrap">

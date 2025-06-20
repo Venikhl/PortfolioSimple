@@ -59,6 +59,8 @@ export default {
     bebras: String,
     innobot: String,
     Cocktail: String,
+    JobSearch: String,
+    AglayaBot: String
   }
 }
 </script>
@@ -149,8 +151,14 @@ export default {
   </header>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+ <section id="hero">
+    <!-- Бесконечный фон текста -->
+    <div class="portfolio-bg-text">
+      <div v-for="n in 20" :key="n">PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO</div>
+    </div>
+
+    <!-- Стеклянный блок с текстом -->
+    <div class="glass" data-aos="zoom-in" data-aos-delay="100">
       <h1>Павлов Глеб</h1>
       <p>Я <span class="typed">{{ words[currentWordIndex] }}</span></p>
       <div class="social-links">
@@ -158,7 +166,8 @@ export default {
         <a href="https://t.me/venikhl" class="telegram"><i class="bx bxl-telegram"></i></a>
       </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
+
 
   <main id="main">
 
@@ -287,20 +296,6 @@ export default {
 
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <img :src="innobot" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>InnoScheduleBot - Бот для расписания студентов Иннополиса.</h4>
-            <p>Приложение</p>
-            <div class="portfolio-links">
-              <a :href="innobot" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Приложение 1" target="_blank"><i class="bx bx-plus"></i></a>
-              <a href="https://t.me/Inno_schedule_bot" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="col-lg-4 col-md-6 portfolio-item filter-diploma">
         <div class="portfolio-wrap">
           <img :src="diplomaSTEP1" class="img-fluid" alt="">
@@ -381,6 +376,35 @@ export default {
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
+          <img :src="AglayaBot" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>AglayaBot - телеграм бот для управления всей компанией через локальный ИИ.</h4>
+            <p>Приложение</p>
+            <div class="portfolio-links">
+              <a :href="AglayaBot" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Приложение 3" target="_blank"><i class="bx bx-plus"></i></a>
+              <a href="https://drive.google.com/file/d/1fjYvWQoMqoa0jL173P-joOd6mVtt-ilT/view?usp=drive_link" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <img :src="Cocktail" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Sign-ature Cocktail - Компьютерная игра где вы можете управлять руками персонажа, как своими через камеру.</h4>
+            <p>Приложение</p>
+            <div class="portfolio-links">
+              <a :href="Cocktail" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Приложение 2" target="_blank"><i class="bx bx-plus"></i></a>
+              <a href="https://a-walking-mess.itch.io/sign-ature-cocktail" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-plus"></i></a>
+              <a href="https://drive.google.com/file/d/1LhJ7cjRZ1KN2wLlLCO9LsZSM3f0b3fYD/view?clckid=25ce10c2" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
           <img :src="TarotApp" class="img-fluid" alt="">
           <div class="portfolio-info">
             <h4>TarotApp - приложение для гадания на картах Таро.</h4>
@@ -388,6 +412,34 @@ export default {
             <div class="portfolio-links">
               <a :href="TarotApp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Приложение 3" target="_blank"><i class="bx bx-plus"></i></a>
               <a href="https://github.com/Venikhl/Tarot" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <img :src="innobot" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>InnoScheduleBot - Бот для расписания студентов Иннополиса.</h4>
+            <p>Приложение</p>
+            <div class="portfolio-links">
+              <a :href="innobot" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Приложение 1" target="_blank"><i class="bx bx-plus"></i></a>
+              <a href="https://t.me/Inno_schedule_bot" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img :src="JobSearch" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>РаботаПоиск - сайт для поиска подходящих вакансий и резюме.</h4>
+            <p>Веб</p>
+            <div class="portfolio-links">
+              <a :href="JobSearch" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Веб 4" target="_blank"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/Venikhl/vacancy-aggregator.git" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
             </div>
           </div>
         </div>
@@ -420,22 +472,6 @@ export default {
           </div>
         </div>
       </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <img :src="Cocktail" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Sign-ature Cocktail - Компьютерная игра где вы можете управлять руками персонажа, как своими через камеру.</h4>
-            <p>Работа</p>
-            <div class="portfolio-links">
-              <a :href="Cocktail" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Приложение 2" target="_blank"><i class="bx bx-plus"></i></a>
-              <a href="https://a-walking-mess.itch.io/sign-ature-cocktail" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-plus"></i></a>
-              <a href="https://drive.google.com/file/d/1LhJ7cjRZ1KN2wLlLCO9LsZSM3f0b3fYD/view?clckid=25ce10c2" class="portfolio-details-lightbox" data-glightbox="type: external" title="Детали портфолио"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
   </div>

@@ -1,112 +1,26 @@
-
 /*--------------------------------------------------------------
 # General - Dark Theme Adaptation
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #e0e0e0; /* Light text color for dark theme */
-  background: #181818; /* Dark background color */
+  color: #e0e0e0;
+  background: #181818;
 }
 
 a {
-  color: #67a4ff; /* Slightly brighter blue for better contrast on dark backgrounds */
+  color: #FFD700;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 a:hover {
-  color: #89b6ff; /* A shade brighter blue for hover state on dark backgrounds */
+  color: #fffacd;
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
-  color: #e0e0e0; /* Light text color for dark theme */
-}
-
-/*--------------------------------------------------------------
-# Back to top button - Dark Theme Adaptation
---------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #67a4ff; /* Slightly brighter blue for better contrast on dark backgrounds */
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 28px;
-  color: #272829; /* Dark color icon for contrast against bright background */
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #89b6ff; /* A shade brighter blue for hover state on dark backgrounds */
-  color: #272829; /* Dark color for contrast against bright background */
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-
-/*--------------------------------------------------------------
-# Preloader - Dark Theme Adaptation
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #343536; /* Dark background color */
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #bb0514;
-  border-top-color: #343536; /* Dark background color for the top border */
-  border-bottom-color: #343536; /* Dark background color for the bottom border */
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
+  color: #e0e0e0;
 }
 
 /*--------------------------------------------------------------
@@ -121,15 +35,15 @@ h6 {
   transition: all 0.5s;
   padding: 15px;
   overflow-y: auto;
-  background: #343536; /* Dark background color */
-  color: #e0e0e0; /* Light text color */
+  background: #1E1A18;
+  color: #e0e0e0;
 }
 
 @media (max-width: 991px) {
   #header {
     width: 300px;
-    background: #343536; /* Dark background color */
-    border-right: 1px solid #555658; /* Slightly lighter border color for contrast */
+    background: #1E1A18;
+    border-right: 1px solid #2c2c2c;
     left: -300px;
   }
 }
@@ -140,14 +54,9 @@ h6 {
   }
 }
 
-
 /*--------------------------------------------------------------
 # Navigation Menu - Dark Theme Adaptation
 --------------------------------------------------------------*/
-
-/**
-* Desktop Navigation 
-*/
 .nav-menu {
   padding: 0;
   display: block;
@@ -168,13 +77,12 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #e0e0e0; /* Lighter text for dark theme */
+  color: #e0e0e0;
   padding: 10px 18px;
   margin-bottom: 8px;
-  transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: #343536; /* Darker background for menu items */
+  background: #2a2a2a;
   height: 56px;
   width: 100%;
   overflow: hidden;
@@ -184,7 +92,7 @@ h6 {
 .nav-menu a i,
 .nav-menu a:focus i {
   font-size: 20px;
-  color: #e0e0e0; /* Lighter icon color for dark theme */
+  color: #FFD700;
 }
 
 .nav-menu a span,
@@ -198,37 +106,26 @@ h6 {
     width: 56px;
     transition: width 0.3s ease;
   }
-
   .nav-menu:hover {
     width: 150px;
   }
-
-  .nav-menu a,
-  .nav-menu a:focus {
-    width: 100%;
-  }
-
-  .nav-menu a span,
-  .nav-menu a:focus span {
+  .nav-menu a span {
     display: none;
-    transition: opacity 0.3s ease;
     opacity: 0;
+    transition: opacity 0.3s ease;
   }
-
-  /* Когда вся панель в состоянии ховера — показываем текст */
   .nav-menu:hover a span {
     display: inline;
     opacity: 1;
   }
 }
 
-
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   color: #fff;
-  background: #bb0514; /* The blue background remains consistent for hover/active state */
+  background: #bb0514;
 }
 
 .nav-menu a:hover span,
@@ -238,20 +135,9 @@ h6 {
   color: #fff;
 }
 
-.nav-menu a:hover,
-.nav-menu li:hover>a {
-  width: 100%;
-  color: #fff;
-}
-
-.nav-menu a:hover span,
-.nav-menu li:hover>a span {
-  display: block;
-}
-
-/**
-* Mobile Navigation 
-*/
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
 .mobile-nav-toggle {
   position: fixed;
   right: 10px;
@@ -269,28 +155,16 @@ h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #e0e0e0; /* Lighter icon color for dark theme */
+  color: #e0e0e0;
 }
 
-.mobile-nav-active {
-  overflow: hidden;
-}
-
-.mobile-nav-active #header {
-  left: 0;
-}
-
-.mobile-nav-active .mobile-nav-toggle {
-  color: #fff;
-  background-color: #bb0514; /* The blue background remains consistent for active state */
-}
 .mobile-nav-menu {
   position: fixed;
-  top: 50px; /* Adjust this value as needed */
+  top: 50px;
   right: 10px;
   z-index: 9999;
-  background-color: #343536;
-  border: 1px solid #343536;
+  background-color: #1E1A18;
+  border: 1px solid #2a2a2a;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -303,44 +177,80 @@ h6 {
 
 .mobile-nav-menu a {
   text-decoration: none;
-  color: white;
+  color: #FFD700;
   font-size: 16px;
 }
 
 .mobile-nav-menu a:hover {
-  color: white;
+  color: #fffacd;
 }
 
 /* Подсветка активной кнопки */
 .nav-link.active {
-  color: #18d26e !important;
+  color: #55ff55 !important;
 }
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
-  background-size: cover;
-  position: relative;
+  background: #1E1A18;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 992px) {
-  #hero {
-    padding-left: 160px;
+.portfolio-bg-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 6vw;
+  font-weight: 700;
+  color: #FFD700;
+  opacity: 0.12;
+  line-height: 1;
+  pointer-events: none;
+  text-transform: uppercase;
+  animation: scrollWords 30s linear infinite;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-bg-text div {
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
+@keyframes scrollWords {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
   }
 }
 
-#hero:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.4); /* Переключаем на полупрозрачный черный цвет */
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+.glass {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 50px 60px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 #hero h1 {
@@ -348,64 +258,68 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #e0e0e0; /* Цвет текста в светлом оттенке */
+  color: #f5f5f5;
 }
 
 #hero p {
-  /* color: #b0b0b0; Светло-серый текст */
-  color: white;
-  margin: 15px 0 0 0;
+  color: #ffffff;
+  margin-top: 15px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #55ff55; /* Светло-голубой цвет текста */
+  color: #55ff55;
   letter-spacing: 1px;
 }
 
-#hero .social-links {
+.social-links {
   margin-top: 30px;
 }
 
-#hero .social-links a {
-  font-size: 24px;
+.social-links a {
+  font-size: 28px;
   display: inline-block;
-  color: #b0b0b0; /* Светло-серый цвет иконки */
+  color: #FFD700;
   line-height: 1;
-  margin-right: 20px;
+  margin-right: 25px;
   transition: 0.3s;
 }
 
-#hero .social-links a:hover {
-  color: #db567a; /* Светло-голубой цвет при наведении */
+.social-links a:hover {
+  color: #fffacd;
 }
 
 @media (max-width: 992px) {
   #hero {
     text-align: center;
+    padding: 20px;
   }
-
+  .glass {
+    padding: 30px 20px;
+  }
   #hero h1 {
     font-size: 32px;
     line-height: 36px;
   }
-
   #hero p {
-    margin-top: 10px;
     font-size: 20px;
     line-height: 24px;
+    margin-top: 10px;
+  }
+  .social-links a {
+    font-size: 24px;
+    margin-right: 20px;
   }
 }
 
 /*--------------------------------------------------------------
-# Sections General
+# Section Default Backgrounds
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
-  overflow: hidden;
-  background-color: #181818;  /* темный фоновый цвет */
-  color: #b0b0b0;  /* светло-серый цвет текста */
+  background-color: #181818;
+  color: #b0b0b0;
 }
 
 .section-title {
@@ -420,7 +334,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #e0e0e0;  /* немного более светлый цвет для заголовков */
+  color: #e0e0e0;
 }
 
 .section-title h2::before {
@@ -429,7 +343,7 @@ section {
   display: block;
   width: 120px;
   height: 1px;
-  background: #333;  /* более темный оттенок для декоративных элементов */
+  background: #2a2a2a;
   bottom: 1px;
   left: calc(50% - 60px);
 }
@@ -440,14 +354,14 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #bb0514;  /* голубой акцентный цвет */
+  background: #bb0514;
   bottom: 0;
   left: calc(50% - 20px);
 }
 
 .section-title p {
   margin-bottom: 0;
-  color: #b0b0b0;  /* светло-серый цвет текста */
+  color: #b0b0b0;
 }
 
 /*--------------------------------------------------------------
@@ -456,7 +370,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #e0e0e0;  /* светлый оттенок для заголовков на темном фоне */
+  color: #e0e0e0;
 }
 
 .about .content ul {
@@ -472,20 +386,21 @@ section {
 
 .about .content ul strong {
   margin-right: 10px;
-  color: #b0b0b0;  /* светло-серый цвет текста для подсветки */
+  color: #b0b0b0;
 }
 
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #db567a;  /* немного светлее голубой для лучшего контраста на темном фоне */
+  color: #FFD700;
   line-height: 0;
 }
 
 .about .content p:last-child {
   margin-bottom: 0;
-  color: #b0b0b0;  /* светло-серый цвет текста */
+  color: #b0b0b0;
 }
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -494,13 +409,13 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #e0e0e0;  /* светлый оттенок для заголовков на темном фоне */
+  color: #e0e0e0;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #db567a;  /* немного светлее голубой для лучшего контраста на темном фоне */
+  border-left: 2px solid #FFD700;
   position: relative;
 }
 
@@ -510,23 +425,23 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #db567a;  /* немного светлее голубой для лучшего контраста на темном фоне */
+  color: #FFD700;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #252525;  /* темный фон для выделения текста */
+  background: #2a2a2a;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
-  color: #b0b0b0;  /* светло-серый цвет текста для подсветки */
+  color: #b0b0b0;
   margin-bottom: 10px;
 }
 
 .resume .resume-item ul {
   padding-left: 20px;
-  color: #b0b0b0;  /* светло-серый цвет текста */
+  color: #b0b0b0;
 }
 
 .resume .resume-item ul li {
@@ -545,9 +460,10 @@ section {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #333;  /* темный фон для круга */
-  border: 2px solid #db567a;  /* немного светлее голубой для контура круга */
+  background: #2a2a2a;
+  border: 2px solid #FFD700;
 }
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -560,7 +476,7 @@ section {
   margin: 0 auto 25px auto;
   list-style: none;
   text-align: center;
-  background: #252525;  /* темный фон */
+  background: #2a2a2a;
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -573,14 +489,14 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #b0b0b0;  /* светло-серый текст */
+  color: #b0b0b0;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #db567a;  /* светло-голубой цвет активного фильтра */
+  color: #FFD700;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -592,12 +508,12 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(37, 37, 37, 0.8);  /* немного прозрачный темный фон */
+  background: rgba(30, 26, 24, 0.8);
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(0, 0, 0, 0.7);  /* затемнение при наведении */
+  background: rgba(24, 24, 24, 0.7);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -624,19 +540,14 @@ section {
   align-items: center;
 }
 
-.portfolio .portfolio-wrap .portfolio-info::before,
-.portfolio .portfolio-wrap .portfolio-info::after {
-  border-color: #b0b0b0;  /* светло-серые рамки */
-}
-
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #e0e0e0;  /* светлый текст на темном фоне */
+  color: #FFD700;
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #e0e0e0;  /* светлый текст на темном фоне */
+  color: #e0e0e0;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -649,7 +560,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #b0b0b0;  /* светло-серые иконки */
+  color: #FFD700;
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
@@ -657,7 +568,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #db567a;  /* светло-голубой при наведении */
+  color: #ffffff;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -670,85 +581,4 @@ section {
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info::before {
-  top: 15px;
-  left: 15px;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info::after {
-  bottom: 15px;
-  right: 15px;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-  background-color: #252525;  /* темный фон для всего блока сведений о портфолио */
-}
-
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #656565;  /* светло-серый фон для неактивных буллетов */
-  opacity: 1;
-  border: 1px solid #db567a;  /* светло-голубая граница буллета */
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #db567a;  /* светло-голубой цвет активного буллета */
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.3);  /* тень, примененная к темному фону */
-  background-color: #1f1f1f;  /* чуть более светлый темный фон для блока информации */
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #656565;  /* светло-серый цвет границы */
-  color: #e0e0e0;  /* светлый текст */
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-  color: #b0b0b0;  /* светло-серый текст */
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #e0e0e0;  /* светлый текст */
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-  color: #b0b0b0;  /* светло-серый текст */
 }

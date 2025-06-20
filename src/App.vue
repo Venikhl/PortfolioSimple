@@ -11,6 +11,8 @@ import ELAB from "./assets/img/portfolio/ELAB.png";
 import bebras from "./assets/img/portfolio/bebras.png";
 import Cocktail from "./assets/img/portfolio/Cocktail.jpg";
 import Home from './components/Home.vue'
+import JobSearch from './assets/img/portfolio/JobSearch.png';
+import AglayaBot from './assets/img/portfolio/AglayaBot.png';
 </script>
 
 <template>
@@ -26,5 +28,7 @@ import Home from './components/Home.vue'
     :bebras="bebras"
     :innobot="innobot"
     :Cocktail="Cocktail"
+    :JobSearch="JobSearch"
+    :AglayaBot=" AglayaBot"
   />
 </template>
